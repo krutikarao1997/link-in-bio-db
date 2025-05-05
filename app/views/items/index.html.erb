@@ -1,0 +1,25 @@
+<%= image_tag("profile-pic.png", alt: "Krutika Rao headshot", class: "profile-pic") %>
+<h1>Krutika's Links</h1>
+
+<div class="social-icons-row">
+  <a href="https://www.linkedin.com/in/krutika-rao/" target="_blank">
+    <%= image_tag("linkedin-icon.png", alt: "LinkedIn", class: "social-icon") %>
+  </a>
+  <a href="https://www.instagram.com/krutikarao/" target="_blank">
+    <%= image_tag("instagram-icon.png", alt: "Instagram", class: "social-icon") %>
+  </a>
+  <a href="https://nukkadpathshala.in/" target="_blank">
+    <%= image_tag("nukkad-icon.png", alt: "Nukkad Pathshala", class: "social-icon") %>
+  </a>
+</div>
+
+
+<div class="links">
+  <% @list_of_items.each do |item| %>
+    <div class="link-box">
+      <a href="<%= item.link_url %>" target="_blank" class="link-text">
+        <%= item.link_description %>
+      </a>
+    </div>
+  <% end %>
+</div>
